@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @pilot.last_name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pilot.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @pilot.number %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @pilot.team %>
+</p>
+
+<p>
+  <strong>N races:</strong>
+  <%= @pilot.n_races %>
+</p>
+
+<p>
+  <strong>N victory:</strong>
+  <%= @pilot.n_victory %>
+</p>
+
+<p>
+  <strong>N second position:</strong>
+  <%= @pilot.n_second_position %>
+</p>
+
+<p>
+  <strong>N third position:</strong>
+  <%= @pilot.n_third_position %>
+</p>
+
+<p>
+  <strong>N fastest lap:</strong>
+  <%= @pilot.n_fastest_lap %>
+</p>
+
+<p>
+  <strong>N pole positions:</strong>
+  <%= @pilot.n_pole_positions %>
+</p>
+
+<p>
+  <strong>N championships:</strong>
+  <%= @pilot.n_championships %>
+</p>
+
+<p>
+  <strong>Url photo:</strong>
+  <%= @pilot.url_photo %>
+</p>
+
+<%= link_to 'Edit', edit_pilot_path(@pilot) %> |
+<%= link_to 'Back', pilots_path %>
