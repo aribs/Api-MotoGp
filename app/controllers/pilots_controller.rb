@@ -9,15 +9,15 @@ class PilotsController < ApplicationController
   def api
     @pilot = Pilot.where("last_name = ?", params[:last_name]).first
     respond_to do|format|
-      format.html
+      format.html {render json: @pilot}
       format.json {render json: @pilot}
     end
   end
   def all_pilots
     @pilots = Pilot.all
     respond_to do |format|
-      format.html
-      format.json {render json:@pilots}
+      format.html {render json: @pilots}
+      format.json {render json: @pilots}
     end
   end
   # GET /pilots/1
