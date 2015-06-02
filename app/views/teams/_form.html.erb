@@ -1,0 +1,45 @@
+<%= form_for(@team) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team_name %><br>
+    <%= f.text_field :team_name %>
+  </div>
+  <div class="field">
+    <%= f.label :pilot1 %><br>
+    <%= f.text_field :pilot1 %>
+  </div>
+  <div class="field">
+    <%= f.label :pilot2 %><br>
+    <%= f.text_field :pilot2 %>
+  </div>
+  <div class="field">
+    <%= f.label :n_races %><br>
+    <%= f.number_field :n_races %>
+  </div>
+  <div class="field">
+    <%= f.label :n_victories %><br>
+    <%= f.number_field :n_victories %>
+  </div>
+  <div class="field">
+    <%= f.label :n_podium %><br>
+    <%= f.number_field :n_podium %>
+  </div>
+  <div class="field">
+    <%= f.label :url_photo %><br>
+    <%= f.text_field :url_photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

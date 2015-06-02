@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601102753) do
+ActiveRecord::Schema.define(version: 20150602101334) do
 
   create_table "pilots", force: :cascade do |t|
     t.string   "last_name"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 20150601102753) do
     t.string   "url_photo"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "team_name"
+    t.string   "pilot1"
+    t.string   "pilot2"
+    t.integer  "n_races"
+    t.integer  "n_victories"
+    t.integer  "n_podium"
+    t.string   "url_photo"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

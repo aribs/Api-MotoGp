@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_name: MyString
+  pilot1: MyString
+  pilot2: MyString
+  n_races: 1
+  n_victories: 1
+  n_podium: 1
+  url_photo: MyString
+
+two:
+  team_name: MyString
+  pilot1: MyString
+  pilot2: MyString
+  n_races: 1
+  n_victories: 1
+  n_podium: 1
+  url_photo: MyString
