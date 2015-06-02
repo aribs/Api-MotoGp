@@ -6,8 +6,15 @@ class TeamsController < ApplicationController
   def index
     @teams = Team.all
   end
-  def api
+  def search_team
     @team = Team.where("team_name LIKE '%" + params[:team_name].to_s  + "%'",)
+    respond_to do|format|
+      format.html {render json: @team}
+      format.json {render json: @team}
+    end
+  end
+  def api #Search by ID team
+    @team = Team.find params[:id]
     respond_to do|format|
       format.html {render json: @team}
       format.json {render json: @team}
