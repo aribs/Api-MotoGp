@@ -13,6 +13,13 @@ class PilotsController < ApplicationController
       format.json {render json: @pilot}
     end
   end
+  def search_pilot
+    @pilot = Pilot.where("last_name LIKE '%" + params[:last_name].to_s  + "%'",)
+    respond_to do|format|
+      format.html {render json: @pilot}
+      format.json {render json: @pilot}
+    end
+  end
   def all_pilots
     @pilots = Pilot.all
     respond_to do |format|
