@@ -18,7 +18,13 @@ class GpRacesController < ApplicationController
       format.json {render json: @gp_race}
     end
   end
-
+  def all_gp_races
+    @gp_races = GpRace.all
+    respond_to do |format|
+      format.html{render json: @gp_races}
+      format.json {render json: @gp_races}
+    end
+  end
   # GET /gp_races/new
   def new
     @gp_race = GpRace.new

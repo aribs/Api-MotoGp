@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/api/teams/:id' => 'teams#api'
   get '/api/teams' =>  'teams#all_teams'
   get '/api/gp_races/:id' => 'gp_races#api'
+  get '/api/gp_races' => 'gp_races#all_gp_races'
 end
