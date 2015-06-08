@@ -1,0 +1,49 @@
+<%= form_for(@gp_race) do |f| %>
+  <% if @gp_race.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gp_race.errors.count, "error") %> prohibited this gp_race from being saved:</h2>
+
+      <ul>
+      <% @gp_race.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :winner_2014 %><br>
+    <%= f.text_field :winner_2014 %>
+  </div>
+  <div class="field">
+    <%= f.label :pole_2014 %><br>
+    <%= f.text_field :pole_2014 %>
+  </div>
+  <div class="field">
+    <%= f.label :fast_lap_2014 %><br>
+    <%= f.text_field :fast_lap_2014 %>
+  </div>
+  <div class="field">
+    <%= f.label :attendance_2014 %><br>
+    <%= f.number_field :attendance_2014 %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

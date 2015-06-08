@@ -1,0 +1,2 @@
+module GpRacesHelper
+end

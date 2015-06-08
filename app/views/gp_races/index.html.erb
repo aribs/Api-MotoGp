@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Gp Races</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Winner 2014</th>
+      <th>Pole 2014</th>
+      <th>Fast lap 2014</th>
+      <th>Attendance 2014</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gp_races.each do |gp_race| %>
+      <tr>
+        <td><%= gp_race.name %></td>
+        <td><%= gp_race.location %></td>
+        <td><%= gp_race.winner_2014 %></td>
+        <td><%= gp_race.pole_2014 %></td>
+        <td><%= gp_race.fast_lap_2014 %></td>
+        <td><%= gp_race.attendance_2014 %></td>
+        <td><%= gp_race.latitude %></td>
+        <td><%= gp_race.longitude %></td>
+        <td><%= link_to 'Show', gp_race %></td>
+        <td><%= link_to 'Edit', edit_gp_race_path(gp_race) %></td>
+        <td><%= link_to 'Destroy', gp_race, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gp race', new_gp_race_path %>

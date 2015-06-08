@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gp_race.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @gp_race.location %>
+</p>
+
+<p>
+  <strong>Winner 2014:</strong>
+  <%= @gp_race.winner_2014 %>
+</p>
+
+<p>
+  <strong>Pole 2014:</strong>
+  <%= @gp_race.pole_2014 %>
+</p>
+
+<p>
+  <strong>Fast lap 2014:</strong>
+  <%= @gp_race.fast_lap_2014 %>
+</p>
+
+<p>
+  <strong>Attendance 2014:</strong>
+  <%= @gp_race.attendance_2014 %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @gp_race.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @gp_race.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_gp_race_path(@gp_race) %> |
+<%= link_to 'Back', gp_races_path %>
