@@ -1,0 +1,2 @@
+module LegendsHelper
+end

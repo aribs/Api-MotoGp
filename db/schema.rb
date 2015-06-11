@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608095549) do
+ActiveRecord::Schema.define(version: 20150611085446) do
 
   create_table "gp_races", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +24,22 @@ ActiveRecord::Schema.define(version: 20150608095549) do
     t.float    "longitude"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "legends", force: :cascade do |t|
+    t.string   "last_name"
+    t.string   "name"
+    t.integer  "number"
+    t.integer  "n_races"
+    t.integer  "n_victory"
+    t.integer  "n_second_position"
+    t.integer  "n_third_position"
+    t.integer  "n_fastest_lap"
+    t.integer  "n_pole_positions"
+    t.string   "url_photo"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "n_championships"
   end
 
   create_table "pilots", force: :cascade do |t|

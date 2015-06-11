@@ -1,0 +1,61 @@
+<%= form_for(@legend) do |f| %>
+  <% if @legend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@legend.errors.count, "error") %> prohibited this legend from being saved:</h2>
+
+      <ul>
+      <% @legend.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :n_races %><br>
+    <%= f.text_field :n_races %>
+  </div>
+  <div class="field">
+    <%= f.label :n_victory %><br>
+    <%= f.text_field :n_victory %>
+  </div>
+  <div class="field">
+    <%= f.label :n_second_position %><br>
+    <%= f.text_field :n_second_position %>
+  </div>
+  <div class="field">
+    <%= f.label :n_third_position %><br>
+    <%= f.text_field :n_third_position %>
+  </div>
+  <div class="field">
+    <%= f.label :n_fastest_lap %><br>
+    <%= f.text_field :n_fastest_lap %>
+  </div>
+  <div class="field">
+    <%= f.label :n_pole_positions %><br>
+    <%= f.text_field :n_pole_positions %>
+  </div>
+  <div class="field">
+    <%= f.label :n_championships %><br>
+    <%= f.text_field :n_championships %>
+  </div>
+  <div class="field">
+    <%= f.label :url_photo %><br>
+    <%= f.text_field :url_photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Legends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Last name</th>
+      <th>Name</th>
+      <th>Number</th>
+      <th>N races</th>
+      <th>N victory</th>
+      <th>N second position</th>
+      <th>N third position</th>
+      <th>N fastest lap</th>
+      <th>N pole positions</th>
+      <th>N championships</th>
+      <th>Url photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @legends.each do |legend| %>
+      <tr>
+        <td><%= legend.last_name %></td>
+        <td><%= legend.name %></td>
+        <td><%= legend.number %></td>
+        <td><%= legend.n_races %></td>
+        <td><%= legend.n_victory %></td>
+        <td><%= legend.n_second_position %></td>
+        <td><%= legend.n_third_position %></td>
+        <td><%= legend.n_fastest_lap %></td>
+        <td><%= legend.n_pole_positions %></td>
+        <td><%= legend.n_championships %></td>
+        <td><%= legend.url_photo %></td>
+        <td><%= link_to 'Show', legend %></td>
+        <td><%= link_to 'Edit', edit_legend_path(legend) %></td>
+        <td><%= link_to 'Destroy', legend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Legend', new_legend_path %>

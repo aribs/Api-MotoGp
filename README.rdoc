@@ -1,28 +1,41 @@
 == README
+<h1>MotoGP API Reference</h1>
+The data are separated into the following types
+<li>Pilots
+<li>Teams
+<li>Gp Races
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h4>Pilots </h4>
+This type of date, returns stats of pilots in MotoGp.
+Returns the following data:
+<li>Id: The id in BD of each pilot.
+<li>Last Name: The last name of each pilot.
+<li>Name: The name of pilot.
+<li>Number: Returns the number of pilot. Ex: Rossi 46.
+<li>Team: Return the current team of pilot. 
+<li>Number of races: Returns the nh5ber of races he has competed in MotoGP.
+<li>Number of victories:Returns the number of victories in MotoGp.
+<li>Number of second:Returns the number of second position archieved in MotoGP..
+<li>Number of third:Return the number of third position archieved in MotoGp.
+<li>Number of pole position:Return the number of pole position archieved in MotoGP.
+<li>Number of fastest lap:Return the number of fastest lap archieved in MotoGp.
+<li>Number of championships: Return the number of championships archieved in MotoGP.
+<li>Photo: Return an URL with a photo of each pilot.
 
-Things you may want to cover:
+<h5>Using Pilots</h5>
+<li><code>api/pilots/ + name of pilot</code> </li>
+<h6>Example:</h6> 
+<div class="example">
+<code>$.ajax({
+				url: "http://localhost:3000/api/pilots/" + "Marquez",
+				data: "",
+				success: function(response){drawPilot(response)},
+				error: function(){console.log("error error error")},
+				dataType: "json"
+				});</code>
+		Returns:
+		<div class="jsonResponse">{"id":1,"last_name":"Marquez","name":"Marc","number":93,"team":"Repsol Honda","n_races":42,"n_victory":20,"n_second_position":8,"n_third_position":4,"n_fastest_lap":24,"n_pole_positions":25,"n_championships":2,"url_photo":"://lifethisgame.files.wordpress.com/2014/10/01qatar14mgp_apertura3024.jpg"}
+		</div>
 
-* Ruby version
+</div>	
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
